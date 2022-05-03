@@ -18,11 +18,11 @@ metadata:
   name: odf-operator
   namespace: openshift-storage
 spec:
-  channel: stable-4.9
+  channel: '{{ fromConfigMap "default" "opp-policy-config" "odf_operator_channel" }}'
   installPlanApproval: Automatic
   name: odf-operator
-  source: redhat-operators
-  sourceNamespace: openshift-marketplace
+  source: '{{ fromConfigMap "default" "opp-policy-config" "odf_operator_source" }}'
+  sourceNamespace: '{{ fromConfigMap "default" "opp-policy-config" "odf_operator_sourcenamespace" }}'
 ---
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
@@ -30,11 +30,11 @@ metadata:
   name: ocs-operator
   namespace: openshift-storage
 spec:
-  channel: stable-4.9
+  channel: '{{ fromConfigMap "default" "opp-policy-config" "ocs_operator_channel" }}'
   installPlanApproval: Automatic
   name: ocs-operator
-  source: redhat-operators
-  sourceNamespace: openshift-marketplace
+  source: '{{ fromConfigMap "default" "opp-policy-config" "ocs_operator_source" }}'
+  sourceNamespace: '{{ fromConfigMap "default" "opp-policy-config" "ocs_operator_sourcenamespace" }}'
 ---
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
@@ -42,11 +42,11 @@ metadata:
   name: mcg-operator
   namespace: openshift-storage
 spec:
-  channel: stable-4.9
+  channel: '{{ fromConfigMap "default" "opp-policy-config" "mcg_operator_channel" }}'
   installPlanApproval: Automatic
   name: mcg-operator
-  source: redhat-operators
-  sourceNamespace: openshift-marketplace
+  source: '{{ fromConfigMap "default" "opp-policy-config" "mcg_operator_source" }}'
+  sourceNamespace: '{{ fromConfigMap "default" "opp-policy-config" "mcg_operator_sourcenamespace" }}'
 ---
 apiVersion: odf.openshift.io/v1alpha1
 kind: StorageSystem

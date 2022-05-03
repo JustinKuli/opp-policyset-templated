@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: opp-policy-config
+  namespace: default
+data:
+  # ACS
+  rhacs_operator_channel: "latest"
+  rhacs_operator_source: "redhat-operators"
+  rhacs_operator_sourcenamespace: "openshift-marketplace"
+  # Compliance Operator
+  compliance_operator_channel: "latest"
+  compliance_operator_source: "redhat-operators"
+  compliance_operator_sourcenamespace: "openshift-marketplace"
+  # ODF
+  odf_operator_channel: "stable-4.9"
+  odf_operator_source: "redhat-operators"
+  odf_operator_sourcenamespace: "openshift-marketplace"
+  ocs_operator_channel: "stable-4.9"
+  ocs_operator_source: "redhat-operators"
+  ocs_operator_sourcenamespace: "openshift-marketplace"
+  mcg_operator_channel: "stable-4.9"
+  mcg_operator_source: "redhat-operators"
+  mcg_operator_sourcenamespace: "openshift-marketplace"
+  # Quay
+  quay_operator_channel: "stable-3.6"
+  quay_operator_source: "redhat-operators"
+  quay_operator_sourcenamespace: "openshift-marketplace"

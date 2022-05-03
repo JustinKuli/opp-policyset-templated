@@ -18,10 +18,11 @@ metadata:
   name: compliance-operator
   namespace: openshift-compliance
 spec:
+  channel: '{{ fromConfigMap "default" "opp-policy-config" "compliance_operator_channel" }}'
   installPlanApproval: Automatic
   name: compliance-operator
-  source: redhat-operators
-  sourceNamespace: openshift-marketplace
+  source: '{{ fromConfigMap "default" "opp-policy-config" "compliance_operator_source" }}'
+  sourceNamespace: '{{ fromConfigMap "default" "opp-policy-config" "compliance_operator_sourcenamespace" }}'
 ---
 apiVersion: operators.coreos.com/v1alpha1
 kind: ClusterServiceVersion
