@@ -71,21 +71,21 @@ policies:
     - path: input-acm-observability/
 # Observability Policy - end
 # ODF Policies - start
-- name: policy-odf
-  categories:
-    - SI System and Information Integrity
-  controls: 
-    - SI-7 Software Firmware and Information Integrity
-  manifests:
-    - path: input-odf/policy-odf.yaml
-- name: policy-odf-status
-  categories:
-    - SI System and Information Integrity
-  controls: 
-    - SI-7 Software Firmware and Information Integrity
-  manifests:
-    - path: input-odf/policy-odf-status.yaml
-  remediationAction: inform
+# - name: policy-odf
+#   categories:
+#     - SI System and Information Integrity
+#   controls: 
+#     - SI-7 Software Firmware and Information Integrity
+#   manifests:
+#     - path: input-odf/policy-odf.yaml
+# - name: policy-odf-status
+#   categories:
+#     - SI System and Information Integrity
+#   controls: 
+#     - SI-7 Software Firmware and Information Integrity
+#   manifests:
+#     - path: input-odf/policy-odf-status.yaml
+#   remediationAction: inform
 # ODF Policies - end
 # Quay Policies - start
 - name: policy-config-quay
