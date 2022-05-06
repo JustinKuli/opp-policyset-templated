@@ -21,11 +21,11 @@ metadata:
   name: rhacs-operator
   namespace: rhacs-operator
 spec:
-  channel: '{{ fromConfigMap "default" "opp-policy-config" "quay_operator_channel" }}'
+  channel: '{{ fromConfigMap "default" "opp-policy-config" "rhacs_operator_channel" }}'
   installPlanApproval: Automatic
   name: rhacs-operator
-  source: '{{ fromConfigMap "default" "opp-policy-config" "quay_operator_source" }}'
-  sourceNamespace: '{{ fromConfigMap "default" "opp-policy-config" "quay_operator_sourcenamespace" }}'
+  source: '{{ fromConfigMap "default" "opp-policy-config" "rhacs_operator_source" }}'
+  sourceNamespace: '{{ fromConfigMap "default" "opp-policy-config" "rhacs_operator_sourcenamespace" }}'
 ---
 apiVersion: v1
 data:
